@@ -1,0 +1,18 @@
+.indexMain__courseLink{
+    display: block;
+    text-decoration: none;
+    border: 1px solid #3f3f3f;
+    color: #3f3f3f;
+    padding: 3px 5px;
+    margin-left: 30px;
+    position: relative;
+    margin-top: 50px;
+}
+
+.indexMain__courseBrush{
+    position: absolute;
+    top: -30px;
+    left: -63px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}

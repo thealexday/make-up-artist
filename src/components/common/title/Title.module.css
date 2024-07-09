@@ -1,0 +1,22 @@
+@font-face {
+    font-family: Noto;
+    src: url('../../../fonts/NotoSerifDisplay-VariableFont_wdth\,wght.ttf');
+}
+
+.title{
+    font-family: 'Noto', serif;
+    font-size: 30px;
+    color: #3f3f3f; 
+}
+
+.center{
+    text-align: center;
+}
+
+.left{
+    text-align: left;
+}
+
+.right{
+    text-align: right;
+}

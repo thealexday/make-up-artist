@@ -1,0 +1,91 @@
+@font-face {
+    font-family: Dancing;
+    src: url('../../../fonts/DancingScript-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url('../../../fonts/RobotoCondensed-VariableFont_wght.ttf');
+}
+
+.indexMain {
+    background-image: url(./img/Кистьфон2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px;
+}
+
+.indexMainBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.indexMainLeft {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.indexMain__imgContainer {
+    width: 300px;
+    height: 400px;
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+}
+
+.indexMain__description {
+    max-width: 300px;
+    margin-left: 70px;
+    margin-top: 50px;
+}
+
+.indexMain__arrow{
+    display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.indexMain__listContainer {
+    list-style-type: none;
+    margin-top: 30px;
+}
+
+.indexMain__descriptionList {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin-bottom: 18px;
+    font-size: 20px;
+}
+
+.colorMarker {
+    color: #960057;
+    font-weight: 500;
+}
+
+.signacher {
+    font-family: 'Dancing', sans-serif; 
+    color: #3f3f3f;
+    -webkit-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+    margin-top: 30px;
+    font-size: 50px;
+}
+
+.indexMain__right{
+    width: 241px;
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.indexMain__right:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+

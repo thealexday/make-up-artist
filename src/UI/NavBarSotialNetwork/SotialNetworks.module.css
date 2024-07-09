@@ -1,0 +1,15 @@
+
+.mediaLinks__box{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.mediaLink{
+    display: block;
+    text-decoration: none;
+    margin-right: 20px;
+    color: azure;
+}
+
