@@ -1,10 +1,11 @@
 import s from './Main.module.css';
-import '../../../common.css';
-import Img_1 from './img/IMG_4732К.jpg';
-import Img_2 from './img/course-arrow.png';
+import '../../../../common.css';
+import Img_1 from '../img/IMG_4732К.jpg';
 
-import { Title } from '../../common/title/Title';
-import { PhotoCourseNav } from '../../../UI/photoCourseNav/PhotoCourseNav';
+import Img_2 from '../img/course-arrow.png';
+
+import { Title } from '../../../common/title/Title';
+import { PhotoCourseNav } from '../../../../UI/photoCourseNav/PhotoCourseNav';
 
 
 export const Main:React.FC = () => {

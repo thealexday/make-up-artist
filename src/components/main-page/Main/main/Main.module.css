@@ -1,15 +1,15 @@
 @font-face {
     font-family: Dancing;
-    src: url('../../../fonts/DancingScript-VariableFont_wght.ttf');
+    src: url('../../../../fonts/DancingScript-VariableFont_wght.ttf');
 }
 
 @font-face {
     font-family: Roboto;
-    src: url('../../../fonts/RobotoCondensed-VariableFont_wght.ttf');
+    src: url('../../../../fonts/RobotoCondensed-VariableFont_wght.ttf');
 }
 
 .indexMain {
-    background-image: url(./img/Кистьфон2.jpg);
+    background-image: url(../img/Кистьфон2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     min-height: 500px;
