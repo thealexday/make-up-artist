@@ -2,10 +2,12 @@ import s from './Button.module.css';
 
 interface ButtonProps{
     children: React.ReactNode,
+    onClick: () => void,
+    buttonWhite?: boolean,
 }
 
-export const Button:React.FC<ButtonProps> = ({children}) => {
+export const Button:React.FC<ButtonProps> = ({children, onClick, buttonWhite}) => {
     return (
-        <button className={s.button}>{children}</button>
+        <button onClick={onClick} className={buttonWhite ? s.buttonWhite : s.button}>{children}</button>
     )
 }
