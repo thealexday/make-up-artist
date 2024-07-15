@@ -6,6 +6,7 @@
 .cardsPrice{
     display: -ms-grid;
     display: grid;
+    margin-bottom: 100px;
     -ms-grid-columns: (22%)[4];
         grid-template-columns: repeat(4, 22%);
     -ms-grid-rows: (1fr)[1];

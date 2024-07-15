@@ -2,10 +2,11 @@ import s from './ButtonHeader.module.css';
 
 interface ButtonHeaderProps{
     children: React.ReactNode,
+    onClick: () => void,
 }
 
-export const ButtonHeader:React.FC<ButtonHeaderProps> = ({children}) => {
+export const ButtonHeader:React.FC<ButtonHeaderProps> = ({children, onClick}) => {
     return (
-        <button className={s.buttonLink}>{children}</button>
+        <button onClick={onClick} className={s.buttonLink}>{children}</button>
     )
 }
