@@ -2,12 +2,20 @@ import { useState } from 'react';
 import { MyModal } from '../../components/modalWindow/MyModal';
 import s from './FormMain.module.css';
 
+import { useAppSelector, useAppDispatch } from '../../store/hooks';
+import { showModal } from '../../store/modalSlice/modalSlice';
+
+import { hideFormModal } from '../../store/formModalSlice/formModalSlice';
+
 interface FormMainProps{
     children?: React.ReactNode,
     formModalStyle?: boolean,
 }
 
 export const FormMain:React.FC<FormMainProps> = ({children, formModalStyle}) => {
+
+  const modal = useAppSelector(state => state.modal.modal);
+  const dispatch = useAppDispatch();
 
     const [form, setForm] = useState({
         name: '',
@@ -20,7 +28,6 @@ export const FormMain:React.FC<FormMainProps> = ({children, formModalStyle}) => 
         phoneError: false,
     })
 
-    const [modal, setModal] = useState(false);
 
     const onSubmit = async (event: any) => {
         event.preventDefault();
@@ -64,7 +71,9 @@ export const FormMain:React.FC<FormMainProps> = ({children, formModalStyle}) => 
           console.log("Success", res);
         }
         setForm({...form, name: '', message: '', phone: ''})
-        setModal(true)
+        dispatch(showModal(true))
+        dispatch(hideFormModal(false))
+        
       };
     
       const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>):void => {
@@ -106,7 +115,7 @@ export const FormMain:React.FC<FormMainProps> = ({children, formModalStyle}) => 
             onChange={(e) => setForm({...form, message: e.target.value})}
             >
                 </textarea> <br />
-              {modal && <MyModal setModal={setModal}><p className={s.modalText}>Спасибо, визажист скоро с вами свяжется</p></MyModal>}
+              {modal && <MyModal><p className={s.modalText}>Спасибо, визажист скоро с вами свяжется</p></MyModal>}
             <button type="submit" className={s.reservationForm__buttonModal}>ЗАПИСАТЬСЯ</button>
         </form>
       )}
@@ -138,7 +147,7 @@ export const FormMain:React.FC<FormMainProps> = ({children, formModalStyle}) => 
             onChange={(e) => setForm({...form, message: e.target.value})}
             >
                 </textarea> <br />
-              {modal && <MyModal setModal={setModal}><p className={s.modalText}>Спасибо, визажист скоро с вами свяжется</p></MyModal>}
+              {modal && <MyModal ><p className={s.modalText}>Спасибо, визажист скоро с вами свяжется</p></MyModal>}
             <button type="submit" className={s.reservationForm__button}>ЗАПИСАТЬСЯ</button>
         </form>
       )}

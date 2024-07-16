@@ -1,15 +1,14 @@
-import s from './MyModal.module.css';
+import s from './FormModalWindow.module.css';
 import '../../common.css';
 
 import { useAppDispatch } from '../../store/hooks';
-import { hideModal } from '../../store/modalSlice/modalSlice';
+import { hideFormModal } from '../../store/formModalSlice/formModalSlice';
 
-interface MyModalProps{
+interface FormModalProps{
     children?: React.ReactNode,
-    
 }
 
-export const MyModal:React.FC<MyModalProps> = (props) => {
+export const FormModalWindow:React.FC<FormModalProps> = (props) => {
     const dispatch = useAppDispatch();
     return (
         <div>
@@ -17,7 +16,7 @@ export const MyModal:React.FC<MyModalProps> = (props) => {
                <div className={s.modal}>
                    <div className={s.modalContent}>
                        {props.children}
-                       <span onClick={() => dispatch(hideModal(false))} className={s.crossButton}>Закрыть</span>
+                       <span onClick={() => dispatch(hideFormModal(false))} className={s.crossButton}>Закрыть</span>
                    </div>
                   
                </div>
