@@ -17,3 +17,15 @@
             justify-content: center;
 }
 
+@media (max-width: 1024px) and (min-width: 767px){
+    .cardsPrice{
+        -ms-grid-columns: (45%)[2];
+        grid-template-columns: repeat(2, 45%);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    }
+}
+

@@ -1,0 +1,33 @@
+@font-face {
+    font-family: Roboto;
+    src: url('../../../../fonts/RobotoCondensed-VariableFont_wght.ttf');
+}
+
+@media (min-width: 767px){
+   .mainMobileCourse{
+    display: none;
+   }
+}
+
+@media (max-width: 766px) and (min-width: 517px){
+    .mainMobileCourse{
+        display: block;
+    background-image: url('../img/Кистьфон3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+    .mainMobileLink{
+        font-family: Roboto, sans-serif;
+        font-weight: 300;
+        text-align: center;
+        color: #3f3f3f;
+        display: block;
+        text-decoration: none;
+        padding: 3px 4px;
+        border-radius: 20px;
+        border: 2px solid #3f3f3f;
+        width: 35%;
+        margin-top: 15px;
+        font-size: 12px;
+    }
+}

@@ -13,7 +13,6 @@ import { showFormModal } from '../../../store/formModalSlice/formModalSlice';
 
 
 export const Header:React.FC = () => {
-    // const [modalForm, setModalForm] = useState(false);
     const modalForm = useAppSelector(state => state.formModal.formModal);
     const dispatch = useAppDispatch();
     

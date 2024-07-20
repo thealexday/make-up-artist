@@ -89,3 +89,37 @@
 }
 
 
+@media (max-width: 1024px) and (min-width: 767px){
+    .indexMain__right{
+        display: none;
+    }
+
+    .indexMain__mediaTablet__none{
+        display: none;
+    }
+}
+
+@media (max-width: 766px) and (min-width: 517px){
+    .indexMain__imgContainer{
+        width: 40%;
+    }
+
+    .indexMain__right{
+        display: none;
+    }
+
+    .indexMain__description{
+        max-width: 300px;
+    margin-left: 15px;
+    margin-top: 10px;
+    }
+
+    .indexMain__descriptionList:nth-child(2){
+        margin-bottom: 0;
+    }
+
+    .signacher{
+        font-size: 30px;
+    margin-top: 0;
+    }
+}

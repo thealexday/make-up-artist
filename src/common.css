@@ -12,3 +12,18 @@
   textarea {
     outline: none;
   }
+
+  .main-tablet-course__info{
+    
+  }
+
+  @media (max-width: 1024px) and (min-width: 767px){
+    .container{
+      max-width: 1000px;;
+    }
+
+    .main-tablet-course__wrapper{
+      display: flex;
+    margin-top: 100px;
+    }
+  }

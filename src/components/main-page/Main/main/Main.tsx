@@ -32,7 +32,7 @@ export const Main:React.FC = () => {
                                     образов, чтобы научить и тебя делать <span className={s.colorMarker}>идеальные
                                         стрелки</span>
                                     </li>
-                                    <li className={[s.indexMain__descriptionList, s.indexMain__arrow].join(' ')}>
+                                    <li className={[s.indexMain__descriptionList, s.indexMain__arrow, s.indexMain__mediaTablet__none].join(' ')}>
                                     <span className={s.colorMarker}>- Обучаю макияжу для себя</span>
                                     <img width="100px" height="auto" className={s.courseArrow}
                                         src={Img_2} alt="arrow-icon"/>
