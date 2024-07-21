@@ -17,12 +17,65 @@
     width: 30%;
     margin: 0 auto;
     margin-bottom: 15px;
-    background-color: transparent;
+    background-color: #e06db0;
     cursor: pointer;
 }
 
 .buttonLink:hover {
     font-weight: 400;
-    background-color: #f3a7d3;
+    background-color: #df81b8;
     color: white;
 }
+
+.buttonShake{
+    -webkit-animation: buttonShake 3s ease-in-out infinite both;
+    animation: buttonShake 2s ease-in-out infinite both;
+}
+
+@keyframes buttonShake{
+    from {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+    }
+    10% {
+        transform: scale(1.01);
+        animation-timing-function: ease-out;
+    }
+    15% {
+        transform: scale(1.02);
+        animation-timing-function: ease-out;
+    }
+    20% {
+        transform: scale(1.03);
+        animation-timing-function: ease-out;
+    }
+    25% {
+        transform: scale(1.04);
+        animation-timing-function: ease-out;
+    }
+    30% {
+        transform: scale(1.05);
+        animation-timing-function: ease-out;
+    }
+    35% {
+        transform: scale(1.06);
+        animation-timing-function: ease-out;
+    }
+    40% {
+        transform: scale(1.07);
+        animation-timing-function: ease-out;
+    }
+}
+
+@media (max-width: 766px) and (min-width: 517px){
+    .buttonLink{
+        width: 40%;
+    }
+}
+
+@media (max-width: 516px){
+    .buttonLink{
+        width: 50%;
+    }
+}
+ 

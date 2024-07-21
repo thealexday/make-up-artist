@@ -28,9 +28,7 @@ export const Main:React.FC = () => {
                                         шаблону</span>, а слушаю, чего хочешь ты
                                     </li>
                                     <li className={s.indexMain__descriptionList}>
-                                    - Сделала <span className={s.colorMarker}>500+
-                                    </span>
-                                    образов, чтобы научить и тебя делать <span className={s.colorMarker}>идеальные
+                                    - Сделала <span className={s.colorMarker}>500+</span> образов, чтобы научить и тебя делать <span className={s.colorMarker}>идеальные
                                         стрелки</span>
                                     </li>
                                     <li className={[s.indexMain__descriptionList, s.indexMain__arrow, s.indexMain__mediaTablet__none].join(' ')}>

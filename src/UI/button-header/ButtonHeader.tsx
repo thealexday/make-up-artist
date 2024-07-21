@@ -7,6 +7,6 @@ interface ButtonHeaderProps{
 
 export const ButtonHeader:React.FC<ButtonHeaderProps> = ({children, onClick}) => {
     return (
-        <button onClick={onClick} className={s.buttonLink}>{children}</button>
+        <button onClick={onClick} className={[s.buttonLink, s.buttonShake].join(' ')}>{children}</button>
     )
 }
