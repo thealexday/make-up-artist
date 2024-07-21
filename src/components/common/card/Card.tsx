@@ -34,12 +34,5 @@ export const Card:React.FC<CardProps> = (props) => {
         </div>
         )}
         </>
-        // <div className={s.priceCard}>
-        //     <h3 className={s.priceCard__title}>{props.title}</h3>
-        //     {props.description ? <p className={s.cardDescription}>{props.description}</p> : null}
-        //     {props.img ? <img width="100%" height="auto" src={props.img} alt="иконка карточки товара" /> : null}
-        //     <p className={s.priceCard__price}>{props.price}</p>
-        //     <Button onClick={() => dispatch(showCardInfo(props.id))}>{props.buttonText}</Button>
-        // </div>
     )
 }

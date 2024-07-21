@@ -14,13 +14,14 @@ export const Main:React.FC = () => {
         <div className={s.indexMain}>
             <div className="container">
                 <div className="wrapper">
+                    <div className={s.overlay}></div>
                     <section className={s.indexMainBox}>
                         <section className={s.indexMainLeft}>
                             <div className={s.indexMain__imgContainer}>
                                 <img width="100%" height="auto"  src={Img_1} alt="фото-потртет-визажиста" />
                             </div>
                             <div className={s.indexMain__description}>
-                                <Title>Обо мне</Title>
+                                <Title alignmobile='center' marginmobile={50} sizemobile={24} colormobile={'white'}>Обо мне</Title>
                                 <ul className={s.indexMain__listContainer}>
                                     <li className={s.indexMain__descriptionList}>
                                     - Крашу <span className={s.colorMarker}>не по

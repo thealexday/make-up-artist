@@ -108,3 +108,40 @@
 .error{
     border: 2px solid darkred;
 }
+
+.reservation__title{
+    font-family: Noto, sans-serif;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 15px;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 0 0 15px white;
+  }
+  
+ 
+
+@media (max-width: 766px) and (min-width: 517px){
+    .reservationForm{
+        max-width: 70%;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    }
+
+    .reservation__title{
+        font-size: 24px;
+      }
+
+}
+
+@media (max-width: 516px){
+  .reservationForm{
+    min-width: 100%;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+
+  .reservation__title{
+    font-size: 20px;
+  }
+}

@@ -8,7 +8,7 @@ export const PhotoCourseNav: React.FC = () => {
     return (
         <Link className={s.indexMain__courseLink} to={'/course'}>
             <div>
-                <Title centre={true}>КУРС</Title>
+                <Title align='center'>КУРС</Title>
                 <img src={Img_2} alt="фото для ссылки курса" width="200px" height="auto" />
             </div>
             <img className={s.indexMain__courseBrush} src={Img_3} alt="фото" width="150px" height="auto" />

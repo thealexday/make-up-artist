@@ -6,6 +6,7 @@ import { useAppSelector, useAppDispatch } from '../../store/hooks';
 import { showModal } from '../../store/modalSlice/modalSlice';
 
 import { hideFormModal } from '../../store/formModalSlice/formModalSlice';
+import { DescriptionText } from '../../components/decriptionText/DescriptionText';
 
 interface FormMainProps{
     children?: React.ReactNode,
@@ -122,7 +123,7 @@ export const FormMain:React.FC<FormMainProps> = ({children, formModalStyle}) => 
 
       {!formModalStyle && (
         <form onSubmit={onSubmit} className={s.reservationForm} action="">
-            <h2>{children}</h2>
+            <h2 className={s.reservation__title}>{children}</h2>
             <input className={formError.nameError ? [s.reservationForm__input, s.error].join(' ') : s.reservationForm__input} 
             type="text" 
             name='имя клиента:' 
@@ -147,7 +148,7 @@ export const FormMain:React.FC<FormMainProps> = ({children, formModalStyle}) => 
             onChange={(e) => setForm({...form, message: e.target.value})}
             >
                 </textarea> <br />
-              {modal && <MyModal ><p className={s.modalText}>Спасибо, визажист скоро с вами свяжется</p></MyModal>}
+              {modal && <MyModal ><DescriptionText margin={10} color='#3f3f3f' >Спасибо, визажист скоро с вами свяжется</DescriptionText></MyModal>}
             <button type="submit" className={s.reservationForm__button}>ЗАПИСАТЬСЯ</button>
         </form>
       )}
