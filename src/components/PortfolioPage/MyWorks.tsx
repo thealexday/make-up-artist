@@ -1,4 +1,5 @@
 import { Header } from "../common/header/Header"
+import { Gallery } from "./gallery/Gallery"
 
 
 export const MyWorks:React.FC = () => {
@@ -6,6 +7,7 @@ export const MyWorks:React.FC = () => {
         <div>
             <Header/>
             <h1>Портфолио</h1>
+            <Gallery/>
         </div>
     )
 }
