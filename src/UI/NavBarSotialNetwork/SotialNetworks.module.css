@@ -10,6 +10,16 @@
     display: block;
     text-decoration: none;
     margin-right: 20px;
-    color: azure;
+
+}
+
+.mediaLink__fa{
+    color: #f3a7d3;
+  font-size: 20px;
+}
+
+.mediaLink__fa:hover{
+    color: white;
+    font-size: 20px; 
 }
 
