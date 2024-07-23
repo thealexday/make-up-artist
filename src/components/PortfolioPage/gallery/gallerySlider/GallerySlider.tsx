@@ -2,7 +2,7 @@ import s from './GallerySlider.module.css';
 import '../../../../common.css';
 import { images } from '../imgSourse';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight, faChevronLeft, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
+import { faChevronRight, faChevronLeft, faCircleXmark} from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
 interface GalerySliderProps {
