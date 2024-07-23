@@ -5,3 +5,12 @@
     gap: 1em;
     justify-items: center;
 }
+
+.image{
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.image:hover{
+    transform: scale(1.02);
+}

@@ -1,13 +1,18 @@
+import { Footer } from "../common/footer/Footer";
 import { Header } from "../common/header/Header"
 import { Gallery } from "./gallery/Gallery"
+
+import s from './MyWorks.module.css';
 
 
 export const MyWorks:React.FC = () => {
     return(
-        <div>
+        <section>
             <Header/>
-            <h1>Портфолио</h1>
+            <div className={s.myWorks}>
             <Gallery/>
-        </div>
+            </div>
+            <Footer/>
+        </section>
     )
 }
