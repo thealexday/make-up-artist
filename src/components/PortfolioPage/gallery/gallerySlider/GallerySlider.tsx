@@ -10,6 +10,7 @@ interface GalerySliderProps {
     show: number,
     setShow: (id: number) => void,
     setSlider: (a: boolean) => void,
+    
 }
 
 export const GalerySlider: React.FC<GalerySliderProps> = ({ children, show, setShow, setSlider }) => {
@@ -70,6 +71,11 @@ export const GalerySlider: React.FC<GalerySliderProps> = ({ children, show, setS
         setXDown(0)
     }
 
+    const handleClose = () => {
+        setSlider(false)
+        document.body.classList.remove('scroll');
+    }
+
 
     return (
         <div>
@@ -79,7 +85,7 @@ export const GalerySlider: React.FC<GalerySliderProps> = ({ children, show, setS
                     <FontAwesomeIcon onClick={handleLeft} className={s.arrowLeft} icon={faChevronLeft} />
                     <div className={s.modalContent} >
 
-                        <FontAwesomeIcon className={s.close} onClick={() => setSlider(false)} icon={faCircleXmark} />
+                        <FontAwesomeIcon className={s.close} onClick={handleClose} icon={faCircleXmark} />
                         {children}
                     </div>
 

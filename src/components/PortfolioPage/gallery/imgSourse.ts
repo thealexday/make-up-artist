@@ -3,7 +3,7 @@ import IMG_2 from './galleryIMG/2.jpg';
 import IMG_3 from './galleryIMG/3.jpg';
 import IMG_4 from './galleryIMG/4.jpg';
 import IMG_5 from './galleryIMG/5.jpg';
-import IMG_6 from './galleryIMG/6.jpg';
+// import IMG_6 from './galleryIMG/6.jpg';
 import IMG_7 from './galleryIMG/7.jpg';
 import IMG_8 from './galleryIMG/8.jpg';
 import IMG_9 from './galleryIMG/9.jpg';
@@ -43,12 +43,12 @@ export const images = [
         with: 240,
         height: 'auto',
       },
-      {
-        src: IMG_6,
-        id: 5,
-        with: 240,
-        height: 'auto',
-      },
+      // {
+      //   src: IMG_6,
+      //   id: 5,
+      //   with: 240,
+      //   height: 'auto',
+      // },
       {
         src: IMG_7,
         id: 6,

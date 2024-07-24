@@ -12,7 +12,7 @@ export const Gallery:React.FC = () => {
     const handleClick = (id: number):void => {
       setSlider(!slider)
       setShow(id)
-      console.log('click')
+      document.body.classList.add('scroll');
     }
   
     return (
