@@ -17,6 +17,10 @@
             justify-content: center;
 }
 
+.lineBox{
+    margin: 30px 0;
+}
+
 @media (max-width: 1024px) and (min-width: 767px){
     .cardsPrice{
         -ms-grid-columns: (45%)[2];

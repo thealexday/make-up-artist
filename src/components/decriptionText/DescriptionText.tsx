@@ -17,7 +17,7 @@ font-family: 'Roboto', sans-serif;
 color: ${props => props.color};
 font-size: ${props => props.size + 'px'};
 font-weight: ${props => props.weight};
-margin-top: ${props => props.margin + 'px'};
+margin-top: ${props => props.margin};
 
 @media(max-width: 766px) and (min-width: 517px){
     font-size: ${props => props.sizemobile + 'px'}

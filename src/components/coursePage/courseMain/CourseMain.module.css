@@ -1,0 +1,111 @@
+@font-face {
+    font-family: Noto;
+    src: url('../../../fonts/NotoSerifDisplay-VariableFont_wdth\,wght.ttf');
+}
+
+.courseMain{
+    background-image: url('../courseIMG/КурсПятно.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+}
+
+.courseMain__photoBox{
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.courseMain__title{
+    font-family: Noto, sans-serif;
+    text-align: center;
+    -webkit-transform: translateY(85%);
+    transform: translateY(85%);
+    color: #3f3f3f;
+    font-size: 45px;
+}
+
+.courseMain__TitleBox{
+    display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.courseMain__subtitle{
+    font-family: Noto, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    -webkit-transform: translateY(133%);
+    transform: translateY(133%);
+    color: #3f3f3f;
+    transform: translateY(133%);
+}
+
+.courseMain__subtitle:first-of-type{
+    margin-right: 40px;
+}
+
+.courseMain__img{
+    max-width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+}
+
+.courseMain__dinamicArrow{
+    height: 100px;
+}
+
+@media (max-width: 1024px) and (min-width: 767px){
+    .courseMain__title{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 766px) and (min-width: 517px){
+    .courseMain__title{
+        font-size: 20px;
+    }
+
+    .courseMain__subtitle{
+        font-size: 10px;
+    }
+
+    .courseMain__dinamicArrow{
+        height: 80px;
+    margin-top: -40px;
+    }
+}
+
+@media (max-width: 516px){
+    .courseMain__title{
+        font-size: 20px;
+    }
+
+    .courseMain__subtitle{
+        font-size: 10px;
+    }
+
+    .courseMain__subtitle:first-of-type{
+        margin-right: 20px;
+    }
+
+    .courseMain__dinamicArrow{
+        height: 50px;
+    }
+}
+
+@media (max-width: 425px){
+    .courseMain__title{
+        font-size: 15px;
+    }
+}

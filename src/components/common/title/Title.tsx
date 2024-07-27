@@ -17,17 +17,17 @@ export const Title = style.h1<TitleProps>`
     font-family: Noto;
     src: url('../../../fonts/NotoSerifDisplay-VariableFont_wdth\,wght.ttf');
 }
-    color: #3f3f3f; 
+    color: ${props => props.color ? props.color : '#3f3f3f'}; 
     font-family: Noto, san-serif;
     text-align: ${props => props.align}
     font-weight: ${props => props.weight};
     font-size: ${props => props.size ? props.size + 'px' : '30px'};
-    margin: ${props => props.margin + 'px'};
+    margin: ${props => props.margin};
 
     @media (max-width: 516px){
         text-align: ${props => props.alignmobile};
         color: ${props => props.colormobile};
-        margin-bottom: ${props => props.marginmobile + 'px'};
+        margin-bottom: ${props => props.marginmobile};
         font-size: ${props => props.sizemobile + 'px'};
     }
     

@@ -12,7 +12,10 @@ export const CardPrice:React.FC = () => {
         <section className={s.cardSection}>
             <div className="container">
                 <div className="wrapper">
-                    <TitleLine/>
+                    <div className={s.lineBox}>
+                    <TitleLine>Прайс</TitleLine>
+                    </div>
+                   
                     <section className={s.cardsPrice}>
                         {cards.map(card => <Card key={card.id} {...card}/>)}
                     </section>

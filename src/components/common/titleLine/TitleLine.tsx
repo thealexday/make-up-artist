@@ -1,11 +1,15 @@
 import { Title } from '../title/Title';
 import s from './TitleLine.module.css';
 
-export const TitleLine:React.FC = () => {
+interface TitleLineProps{
+    children: React.ReactNode
+}
+
+export const TitleLine:React.FC<TitleLineProps> = ({children}) => {
     return (
         <div className={s.titleLineBox}>
         <div className={s.line}></div>
-        <Title>Прайс</Title>
+        <Title sizemobile={20}>{children}</Title>
         <div className={s.line}></div>
         </div>
     )

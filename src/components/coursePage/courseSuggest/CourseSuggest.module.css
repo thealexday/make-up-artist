@@ -1,0 +1,14 @@
+.paket__suggest{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.paket__suggestIcon{
+    margin-right: 15px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+}
