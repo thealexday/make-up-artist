@@ -13,6 +13,7 @@ import { MainPage } from './components/main-page/MainPage';
 import { Course } from './components/coursePage/Course';
 import { Contacts } from './components/contactsPage/Contacts';
 import { MyWorks } from './components/PortfolioPage/MyWorks';
+import { Header } from './components/common/header/Header';
 
 const router = createBrowserRouter([
   {

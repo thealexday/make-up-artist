@@ -11,9 +11,10 @@ import { DescriptionText } from '../../components/decriptionText/DescriptionText
 interface FormMainProps{
     children?: React.ReactNode,
     formModalStyle?: boolean,
+    course?: boolean,
 }
 
-export const FormMain:React.FC<FormMainProps> = ({children, formModalStyle}) => {
+export const FormMain:React.FC<FormMainProps> = ({children, formModalStyle, course}) => {
 
   const modal = useAppSelector(state => state.modal.modal);
   const dispatch = useAppDispatch();
@@ -22,6 +23,7 @@ export const FormMain:React.FC<FormMainProps> = ({children, formModalStyle}) => 
         name: '',
         phone: '',
         message: '',
+        consultation: 'Здравствуйте, хочу получить консультацию по курсу "Макияж для себя"',
     })
 
     const [formError, setFormError] = useState({
@@ -71,7 +73,7 @@ export const FormMain:React.FC<FormMainProps> = ({children, formModalStyle}) => 
         if (res.success) {
           console.log("Success", res);
         }
-        setForm({...form, name: '', message: '', phone: ''})
+        setForm({...form, name: '', message: '', phone: '', consultation: ''})
         dispatch(showModal(true))
         dispatch(hideFormModal(false))
         
@@ -108,16 +110,27 @@ export const FormMain:React.FC<FormMainProps> = ({children, formModalStyle}) => 
             onChange={handlePhoneChange}
              /> 
              <br />
-            <textarea className={s.reservationForm__inputModal} 
+             {course && <textarea className={s.reservationForm__inputModal} 
+            name="сообщение страница курса:"  
+            cols={20} rows={10} 
+            placeholder="Написать сообщение (не обязательно)"
+            value={form.consultation}
+            onChange={(e) => setForm({...form, consultation: e.target.value})}
+            >
+                </textarea>}
+                {!course &&  <textarea className={s.reservationForm__inputModal} 
             name="сообщение:"  
             cols={20} rows={10} 
             placeholder="Написать сообщение (не обязательно)"
             value={form.message}
             onChange={(e) => setForm({...form, message: e.target.value})}
             >
-                </textarea> <br />
+                </textarea>}
+            <br />
               {modal && <MyModal><p className={s.modalText}>Спасибо, визажист скоро с вами свяжется</p></MyModal>}
-            <button type="submit" className={s.reservationForm__buttonModal}>ЗАПИСАТЬСЯ</button>
+              {course &&  <button type="submit" className={s.reservationForm__buttonModal}>Хочу консультацию</button>} 
+              {!course && <button type="submit" className={s.reservationForm__buttonModal}>ЗАПИСАТЬСЯ</button>}
+            
         </form>
       )}
 
@@ -149,7 +162,8 @@ export const FormMain:React.FC<FormMainProps> = ({children, formModalStyle}) => 
             >
                 </textarea> <br />
               {modal && <MyModal ><DescriptionText margin={10} color='#3f3f3f' >Спасибо, визажист скоро с вами свяжется</DescriptionText></MyModal>}
-            <button type="submit" className={s.reservationForm__button}>ЗАПИСАТЬСЯ</button>
+              <button type="submit" className={s.reservationForm__button}>ЗАПИСАТЬСЯ</button>
+            
         </form>
       )}
 

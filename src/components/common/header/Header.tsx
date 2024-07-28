@@ -11,8 +11,11 @@ import { FormModalWindow } from '../../../UI/formModal/FormModalWindow';
 import { useAppSelector, useAppDispatch } from '../../../store/hooks';
 import { showFormModal } from '../../../store/formModalSlice/formModalSlice';
 
+interface HeaderProps{
+    cons?: boolean,
+}
 
-export const Header:React.FC = () => {
+export const Header:React.FC<HeaderProps> = ({cons}) => {
     const modalForm = useAppSelector(state => state.formModal.formModal);
     const dispatch = useAppDispatch();
     
@@ -22,8 +25,9 @@ export const Header:React.FC = () => {
                 <section>
                     <NavBar/>
                     <SotialNetwork/>
-                    <ButtonHeader onClick={() => dispatch(showFormModal(true))}>Записаться</ButtonHeader>
-                    {modalForm &&  <FormModalWindow ><FormMain formModalStyle={true}></FormMain></FormModalWindow>}
+                    {cons && <ButtonHeader onClick={() => dispatch(showFormModal(true))}>Консультация по курсу</ButtonHeader>}
+                     {!cons && <ButtonHeader onClick={() => dispatch(showFormModal(true))}>Записаться</ButtonHeader>}
+                    {modalForm &&  <FormModalWindow ><FormMain course={false} formModalStyle={true}></FormMain></FormModalWindow>}
                 </section>
             </div>
         </header>

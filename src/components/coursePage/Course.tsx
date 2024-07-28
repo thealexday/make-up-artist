@@ -29,7 +29,7 @@ export const Course: React.FC = () => {
 
     return (
         <div>
-            <Header />
+            <Header cons={true}/>
             <CourseMain/>
             <TitleLine>Пакет 1</TitleLine>
             <CourseItem>
@@ -68,7 +68,7 @@ export const Course: React.FC = () => {
             <div className={s.buttonWrapper}>
                 <ButtonHeader onClick={() => dispatch(showFormModal(true))}>Получить консультацию</ButtonHeader>
             </div>
-            {modalForm &&  <FormModalWindow ><FormMain formModalStyle={true}></FormMain></FormModalWindow>}
+            {modalForm &&  <FormModalWindow ><FormMain course={true} formModalStyle={true}></FormMain></FormModalWindow>}
             <Footer />
         </div>
     )
