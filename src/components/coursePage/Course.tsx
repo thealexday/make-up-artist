@@ -9,6 +9,12 @@ import { CourseSuggest } from "./courseSuggest/CourseSuggest";
 import { CourseMain } from "./courseMain/CourseMain";
 
 import { TitleLine } from "../common/titleLine/TitleLine";
+import { ButtonHeader } from "../../UI/button-header/ButtonHeader";
+
+import { useAppSelector,  useAppDispatch} from "../../store/hooks";
+import { showFormModal } from "../../store/formModalSlice/formModalSlice";
+import { FormModalWindow } from "../../UI/formModal/FormModalWindow";
+import { FormMain } from "../../UI/formMain/FormMain";
 
 
 
@@ -18,6 +24,8 @@ import { TitleLine } from "../common/titleLine/TitleLine";
 
 export const Course: React.FC = () => {
     
+    const modalForm = useAppSelector(state => state.formModal.formModal);
+    const dispatch = useAppDispatch();
 
     return (
         <div>
@@ -34,7 +42,9 @@ export const Course: React.FC = () => {
                     <CourseSuggest/>
                     </div>
             </CourseItem>
-            
+            <div className={s.buttonWrapper}>
+                <ButtonHeader onClick={() => dispatch(showFormModal(true))}>Получить консультацию</ButtonHeader>
+            </div>
            <TitleLine>Пакет 2</TitleLine>
            <Title sizemobile={20} align="center">2 ДНЯ</Title>
             <CourseItem>
@@ -55,6 +65,10 @@ export const Course: React.FC = () => {
                <CourseSuggest/>
                </div>
             </CourseItem>
+            <div className={s.buttonWrapper}>
+                <ButtonHeader onClick={() => dispatch(showFormModal(true))}>Получить консультацию</ButtonHeader>
+            </div>
+            {modalForm &&  <FormModalWindow ><FormMain formModalStyle={true}></FormMain></FormModalWindow>}
             <Footer />
         </div>
     )
