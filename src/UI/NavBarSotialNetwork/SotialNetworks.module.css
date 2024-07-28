@@ -26,3 +26,23 @@
     font-size: 20px; 
 }
 
+
+
+@media (max-width: 766px) and (min-width: 517px){
+    .mediaLink__fa{
+      font-size: 18px;
+    }
+}
+
+@media (max-width: 516px){
+    .mediaLink__fa{
+      font-size: 16px;
+    }
+}
+
+@media (max-width: 425px){
+    .mediaLink__fa{
+        font-size: 16px;
+      }
+}
+

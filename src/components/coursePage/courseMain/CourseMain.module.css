@@ -65,6 +65,41 @@
     height: 100px;
 }
 
+.shake__vertical {
+	-webkit-animation: shake-vertical 3s ease-out infinite both;
+	        animation: shake-vertical 3s ease-out infinite both;
+}
+
+
+  @keyframes shake-vertical {
+    0%,
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+      -webkit-transform: translateY(-8px);
+              transform: translateY(-8px);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: translateY(8px);
+              transform: translateY(8px);
+    }
+    80% {
+      -webkit-transform: translateY(6.4px);
+              transform: translateY(6.4px);
+    }
+    90% {
+      -webkit-transform: translateY(-6.4px);
+              transform: translateY(-6.4px);
+    }
+  }
+
 @media (max-width: 1024px) and (min-width: 767px){
     .courseMain__title{
         font-size: 40px;

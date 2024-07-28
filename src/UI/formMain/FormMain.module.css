@@ -118,6 +118,26 @@
     text-align: center;
     text-shadow: 0 0 15px white;
   }
+
+  .dateTime__text,
+  .dateTime__textBlack{
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      margin: 0 auto;
+      padding-bottom: 10px;
+  }
+
+  .dateTime__text{
+      color: white;
+  }
+
+  .dateTime__textBlack{
+      color: black;
+  }
+
+  .dateTime__textBlack_modal{
+      padding-bottom: 0;
+  }
   
  
 

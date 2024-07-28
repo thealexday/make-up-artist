@@ -23,6 +23,7 @@ export const FormMain:React.FC<FormMainProps> = ({children, formModalStyle, cour
         name: '',
         phone: '',
         message: '',
+        dateTime: '',
         consultation: 'Здравствуйте, хочу получить консультацию по курсу "Макияж для себя"',
     })
 
@@ -118,14 +119,18 @@ export const FormMain:React.FC<FormMainProps> = ({children, formModalStyle, cour
             onChange={(e) => setForm({...form, consultation: e.target.value})}
             >
                 </textarea>}
-                {!course &&  <textarea className={s.reservationForm__inputModal} 
+                {!course &&  <>
+                  <label className={[s.dateTime__textBlack, s.dateTime__textBlack_modal].join(' ')} htmlFor="localdate">Какая дата и время вас интересует</label><br />
+             <input className={s.reservationForm__inputModal} onChange={(e) => setForm({...form, dateTime: e.target.value})} type="datetime-local" id="localdate" name="интересующая дата"/> <br />
+                  <textarea className={s.reservationForm__inputModal} 
             name="сообщение:"  
-            cols={20} rows={10} 
+            cols={20} rows={4} 
             placeholder="Написать сообщение (не обязательно)"
             value={form.message}
             onChange={(e) => setForm({...form, message: e.target.value})}
             >
-                </textarea>}
+                </textarea>
+                </> }
             <br />
               {modal && <MyModal><p className={s.modalText}>Спасибо, визажист скоро с вами свяжется</p></MyModal>}
               {course &&  <button type="submit" className={s.reservationForm__buttonModal}>Хочу консультацию</button>} 
@@ -153,6 +158,8 @@ export const FormMain:React.FC<FormMainProps> = ({children, formModalStyle, cour
             onChange={handlePhoneChange}
              /> 
              <br />
+             <label className={s.dateTime__text} htmlFor="localdate">Какая дата и время вас интересует</label>
+             <input className={s.reservationForm__input} onChange={(e) => setForm({...form, dateTime: e.target.value})} type="datetime-local" id="localdate" name="интересующая дата"/> <br />
             <textarea className={s.reservationForm__input} 
             name="сообщение:"  
             cols={20} rows={10} 
@@ -162,7 +169,7 @@ export const FormMain:React.FC<FormMainProps> = ({children, formModalStyle, cour
             >
                 </textarea> <br />
               {modal && <MyModal ><DescriptionText margin={10} color='#3f3f3f' >Спасибо, визажист скоро с вами свяжется</DescriptionText></MyModal>}
-              <button type="submit" className={s.reservationForm__button}>ЗАПИСАТЬСЯ</button>
+              <button type="submit" className={s.reservationForm__button}>УТОЧНИТЬ ДАТУ</button>
             
         </form>
       )}

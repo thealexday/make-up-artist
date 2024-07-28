@@ -16,7 +16,7 @@ export const CourseMain:React.FC = () => {
                             <h2 className={s.courseMain__subtitle}>2 ПАКЕТА</h2>
                         </div>
                         <img className={s.courseMain__img} src={IMG} alt="фото визажиста" />
-                        <img className={s.courseMain__dinamicArrow} src={IMG_ARROW} alt="иконка стрелки" />
+                        <img className={[s.courseMain__dinamicArrow, s.shake__vertical].join(' ')} src={IMG_ARROW} alt="иконка стрелки" />
                     </div>
                 </div>
             </div>

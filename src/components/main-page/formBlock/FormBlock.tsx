@@ -10,7 +10,7 @@ export const FormBlock:React.FC = () => {
             <div className="container">
                 <div className="wrapper">
                     <div className={s.reservation__overlay}></div>
-                <FormMain>Забронировать дату</FormMain>
+                <FormMain>Уточнить свободную дату</FormMain>
                 </div>
             </div>
         </section>
