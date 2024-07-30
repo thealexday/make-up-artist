@@ -6,9 +6,15 @@ import AVATAR_IMG from './contacts-img/IMG_2067.jpg';
 import { Title } from "../common/title/Title";
 import { SotialNetwork } from "../../UI/NavBarSotialNetwork/SotialNetwork";
 import { YandexMaps } from "../maps/YandexMaps";
+import { useAppSelector } from "../../store/hooks";
+import { DescriptionText } from "../decriptionText/DescriptionText";
+import { MyModal } from "../modalWindow/MyModal";
 
 
 export const Contacts: React.FC = () => {
+
+    const modal = useAppSelector(state => state.modal.modal)
+
     return (
         <div>
             <Header />
@@ -22,6 +28,7 @@ export const Contacts: React.FC = () => {
                 </div>
                 <YandexMaps/>
             </section>
+            {modal && <MyModal ><DescriptionText margin={10} color='#3f3f3f' >Спасибо, визажист скоро с вами свяжется</DescriptionText></MyModal>}
             <Footer />
         </div>
     )

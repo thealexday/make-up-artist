@@ -132,7 +132,6 @@ export const FormMain:React.FC<FormMainProps> = ({children, formModalStyle, cour
                 </textarea>
                 </> }
             <br />
-              {modal && <MyModal><p className={s.modalText}>Спасибо, визажист скоро с вами свяжется</p></MyModal>}
               {course &&  <button type="submit" className={s.reservationForm__buttonModal}>Хочу консультацию</button>} 
               {!course && <button type="submit" className={s.reservationForm__buttonModal}>ЗАПИСАТЬСЯ</button>}
             

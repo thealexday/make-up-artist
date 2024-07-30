@@ -3,6 +3,7 @@ import { Header } from "../common/header/Header"
 import { CourseItem } from "./courseItem/CourseItem"
 import { Title } from '../common/title/Title';
 import { DescriptionText } from '../decriptionText/DescriptionText';
+import { MyModal } from "../modalWindow/MyModal";
 
 import s from './Course.module.css';
 import { CourseSuggest } from "./courseSuggest/CourseSuggest";
@@ -25,8 +26,9 @@ import { FormMain } from "../../UI/formMain/FormMain";
 export const Course: React.FC = () => {
     
     const modalForm = useAppSelector(state => state.formModal.formModal);
+    const modal = useAppSelector(state => state.modal.modal);
     const dispatch = useAppDispatch();
-
+    
     return (
         <div>
             <Header cons={true}/>
@@ -69,6 +71,7 @@ export const Course: React.FC = () => {
                 <ButtonHeader onClick={() => dispatch(showFormModal(true))}>Получить консультацию</ButtonHeader>
             </div>
             {modalForm &&  <FormModalWindow ><FormMain course={true} formModalStyle={true}></FormMain></FormModalWindow>}
+            {modal && <MyModal ><DescriptionText margin={10} color='#3f3f3f' >Спасибо, визажист скоро с вами свяжется</DescriptionText></MyModal>}
             <Footer />
         </div>
     )
