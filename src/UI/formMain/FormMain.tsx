@@ -32,9 +32,13 @@ export const FormMain:React.FC<FormMainProps> = ({children, formModalStyle, cour
         phoneError: false,
     })
 
+    const [disabledEl, setDisabledEl] = useState(false);
+
 
     const onSubmit = async (event: any) => {
         event.preventDefault();
+
+        setDisabledEl(true)
 
         // проверка номера телефона:
         const requiredPhone = /^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$/gi;
@@ -70,9 +74,12 @@ export const FormMain:React.FC<FormMainProps> = ({children, formModalStyle, cour
           },
           body: json
         }).then((res) => res.json());
+
+        
     
         if (res.success) {
           console.log("Success", res);
+          setDisabledEl(false)
         }
         setForm({...form, name: '', message: '', phone: '', consultation: ''})
         dispatch(showModal(true))
@@ -132,8 +139,8 @@ export const FormMain:React.FC<FormMainProps> = ({children, formModalStyle, cour
                 </textarea>
                 </> }
             <br />
-              {course &&  <button type="submit" className={s.reservationForm__buttonModal}>Хочу консультацию</button>} 
-              {!course && <button type="submit" className={s.reservationForm__buttonModal}>ЗАПИСАТЬСЯ</button>}
+              {course &&  <button type="submit" disabled={disabledEl} className={disabledEl ? s.reservationForm__buttonModalDisabled : s.reservationForm__buttonModal}>{disabledEl ? 'Отправляем...' : 'Хочу консультацию'}</button>} 
+              {!course && <button type="submit" disabled={disabledEl} className={disabledEl ? s.reservationForm__buttonModalDisabled : s.reservationForm__buttonModal}>{disabledEl ? 'Отправляем...' : 'УТОЧНИТЬ ДАТУ'}</button>}
             
         </form>
       )}
@@ -158,7 +165,7 @@ export const FormMain:React.FC<FormMainProps> = ({children, formModalStyle, cour
              /> 
              <br />
              <label className={s.dateTime__text} htmlFor="localdate">Какая дата и время вас интересует</label>
-             <input className={s.reservationForm__input} onChange={(e) => setForm({...form, dateTime: e.target.value})} type="datetime-local" id="localdate" name="интересующая дата"/> <br />
+             <input className={s.reservationForm__input} onChange={(e) => setForm({...form, dateTime: e.target.value})} type="datetime-local" id="localdate" name="интересующая дата" required/> <br />
             <textarea className={s.reservationForm__input} 
             name="сообщение:"  
             cols={20} rows={10} 
@@ -168,7 +175,7 @@ export const FormMain:React.FC<FormMainProps> = ({children, formModalStyle, cour
             >
                 </textarea> <br />
               {modal && <MyModal ><DescriptionText margin={10} color='#3f3f3f' >Спасибо, визажист скоро с вами свяжется</DescriptionText></MyModal>}
-              <button type="submit" className={s.reservationForm__button}>УТОЧНИТЬ ДАТУ</button>
+              <button disabled={disabledEl} type="submit" className={disabledEl ? s.reservationForm__buttonDisabled : s.reservationForm__button}>{disabledEl ? 'Отправляем...' : 'УТОЧНИТЬ ДАТУ'}</button>
             
         </form>
       )}
